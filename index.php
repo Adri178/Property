@@ -38,7 +38,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>Real Estate PHP</title>
+<title>Real Estate</title>
 </head>
 <body>
 
