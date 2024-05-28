@@ -18,6 +18,8 @@ if(isset($_REQUEST['login']))
 			   
 				$_SESSION['uid']=$row['uid'];
 				$_SESSION['uemail']=$email;
+				$_SESSION['uname'] = $row['uname'];
+            	$_SESSION['uimage'] = $row['uimage'] ? $row['uimage'] : 'admin/user/user-a-min.png';
 				header("location:index.php");
 				
 		   }

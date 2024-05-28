@@ -13,7 +13,7 @@ if(!isset($_SESSION['auser']))
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="dashboard.php" class="logo">
-						<img src="assets/img/rsadmin.png" alt="Logo">
+						<img src="assets/img/rsadmin.svg" alt="Logo">
 					</a>
 					<a href="dashboard.php" class="logo logo-small">
 						<img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
