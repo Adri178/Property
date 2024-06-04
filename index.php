@@ -38,7 +38,7 @@ include("config.php");
 
 <!--	Title
 	=========================================================-->
-<title>ANDHARINIIIIIIII</title>
+<title>Property</title>
 </head>
 <body>
 
