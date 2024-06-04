@@ -255,6 +255,9 @@ include("config.php");
                 </div>
             </div>
         </div>
+
+
+        <?php include("about.php");?>
 		<!--	why choose us -->
 		
 		<!--	How it work -->

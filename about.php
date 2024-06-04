@@ -1,9 +1,3 @@
-<?php 
-ini_set('session.cache_limiter','public');
-session_cache_limiter(false);
-session_start();
-include("config.php");								
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,7 +47,6 @@ include("config.php");
 <div id="page-wrapper">
     <div class="row"> 
         <!--	Header start  -->
-		<?php include("include/header.php");?>
         <!--	Header end  -->
         
         <!--	Banner   --->
@@ -110,7 +103,6 @@ include("config.php");
         <!--	About Our Company -->        
         
        <!--	Footer   start-->
-		<?php include("include/footer.php");?>
 		<!--	Footer   start-->
         
         <!-- Scroll to top --> 
