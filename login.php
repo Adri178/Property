@@ -23,7 +23,7 @@ if(isset($_REQUEST['login']))
 				$_SESSION['utype'] = $row['utype'];
 
 				if ($row['utype'] == 'builder') {
-					header("location:register.php");
+					header("location:lang.php");
 				} else {
 					header("location:index.php");
 				}
