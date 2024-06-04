@@ -16,7 +16,7 @@
                                 <li class="nav-item"> <a class="nav-link" href="about.php">About</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="contact.php">Contact</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="property.php">Properties</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="agent.php">Agent</a> </li>
+                                <!-- <li class="nav-item"> <a class="nav-link" href="agent.php">Agent</a> </li> -->
                             </ul>
                             <div class="ml-auto d-flex align-items-center">
                                 <a class="btn btn-success d-none d-xl-block mr-3" style="border-radius:10px;" href="submitproperty.php">+ Pasang Iklan</a>
