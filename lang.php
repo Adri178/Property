@@ -189,7 +189,7 @@
                             <li>Tutorial</li>
                         </ul>
                         <!-- <?= $_GET['id'];?> -->
-                        <a href="pay/index.php?id=<?= $_GET['id'];?>&level=1" class="card__cta cta" >Get Langganan</a>
+                        <a href="#" class="card__cta cta" >Get Langganan</a>
                     </div>
 
                     <div class="cards__card card">
@@ -200,7 +200,7 @@
                             <li>Tutorial</li>
                             <li>Seminar</li>
                         </ul>
-                        <a href="pay/index.php?id=<?= $_GET['id'];?>&level=2" class="card__cta cta" >Get Langganan</a>
+                        <a href="#" class="card__cta cta" >Get Langganan</a>
                     </div>
                 </div>
 
