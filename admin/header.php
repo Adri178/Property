@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 require("config.php");
 ////code
  
@@ -103,7 +103,7 @@ if(!isset($_SESSION['auser']))
 								<ul style="display: none;">
 									<li><a href="adminlist.php"> Admin </a></li>
 									<li><a href="userlist.php"> Users </a></li>
-									<li><a href="useragent.php"> Agent </a></li>
+									<!-- <li><a href="useragent.php"> Agent </a></li> -->
 									<li><a href="userbuilder.php"> Builder </a></li>
 								</ul>
 							</li>

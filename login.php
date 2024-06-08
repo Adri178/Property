@@ -20,14 +20,8 @@ if(isset($_REQUEST['login']))
 				$_SESSION['uemail']=$email;
 				$_SESSION['uname'] = $row['uname'];
             	$_SESSION['uimage'] = $row['uimage'] ? $row['uimage'] : 'admin/user/user-a-min.png';
-				$_SESSION['utype'] = $row['utype'];
-
-				if ($row['utype'] == 'builder') {
-					header("location:lang.php");
-				} else {
-					header("location:index.php");
-				}
-					
+				header("location:index.php");
+				
 		   }
 		   else{
 			   $error = "<p class='alert alert-warning'>Email or Password doesnot match!</p> ";
