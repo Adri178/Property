@@ -1,5 +1,4 @@
 <?php
-session_start();
 require("config.php");
 ////code
  
@@ -65,7 +64,7 @@ if(!isset($_SESSION['auser']))
 				<!-- /Header Right Menu -->
 				
             </div>
-			
+			<br>
 			<!-- header --->
 			
 			
@@ -154,7 +153,17 @@ if(!isset($_SESSION['auser']))
 									<li><a href="aboutview.php"> View About </a></li>
 								</ul>
 							</li>
-							
+							<li class="menu-title"> 
+								<span>News</span>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="fe fe-file"></i> <span> News </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="newsadd.php"> Add News </a></li>
+									<li><a href="newsview.php"> View News </a></li>
+									<li><a href="category.php"> Category </a></li>
+								</ul>
+							</li>
 						</ul>
 					</div>
                 </div>
