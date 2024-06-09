@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -178,29 +177,36 @@
     <body>
 
         <main class="main flow">
-            <h1 class="main__heading">Langganan Batik Education</h1>
+            <h1 class="main__heading">Langganan RumaSu</h1>
             <div class="main__cards cards">
                 <div class="cards__inner">
                     <div class="cards__card card">
-                        <h2 class="card__heading">Pelajar</h2>
-                        <p class="card__price">$3,23</p>
+                        <h2 class="card__heading">1 Bulan</h2>
+                        <p class="card__price">Rp <br> 100.000</p>
                         <ul role="list" class="card__bullets flow">
-                            <li>Modul Pembelajaran</li>
-                            <li>Tutorial</li>
+                            <li>Pengiklanan Dalam 1 Bulan Penuh</li>
+                            <!-- <li></li> -->
                         </ul>
-                        <!-- <?= $_GET['id'];?> -->
-                        <a href="#" class="card__cta cta" >Get Langganan</a>
+                        <a href="./pay/index.php" class="card__cta cta" >Get Langganan</a>
                     </div>
 
                     <div class="cards__card card">
-                        <h2 class="card__heading">UMUM</h2>
-                        <p class="card__price">$5,16</p>
+                        <h2 class="card__heading">6 Bulan</h2>
+                        <p class="card__price">Rp <br> 500.000</p>
                         <ul role="list" class="card__bullets flow">
-                            <li>Modul Pembelajaran</li>
-                            <li>Tutorial</li>
-                            <li>Seminar</li>
+                            <li>Pengiklanan Dalam 6 Bulan Penuh</li>
+                            <!-- <li></li> -->
                         </ul>
-                        <a href="#" class="card__cta cta" >Get Langganan</a>
+                        <a href="./pay/index.php" class="card__cta cta" >Get Langganan</a>
+                    </div>
+                    <div class="cards__card card">
+                        <h2 class="card__heading">1 Tahun</h2>
+                        <p class="card__price">Rp 1.000.000</p>
+                        <ul role="list" class="card__bullets flow">
+                            <li>Pengiklanan Dalam 1 Tahun Bulan Penuh</li>
+                            <!-- <li></li> -->
+                        </ul>
+                        <a href="./pay/index.php" class="card__cta cta" >Get Langganan</a>
                     </div>
                 </div>
 

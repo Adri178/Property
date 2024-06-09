@@ -129,6 +129,7 @@ if(isset($_POST['addabout']))
 										</div>
 										<div class="text-left">
 											<input type="submit" class="btn btn-primary"  value="Submit" name="addabout" style="margin-left:200px;">
+											<input type="button" class="btn btn-secondary" value="Cancel" onclick="window.location.href='dashboard.php';">
 										</div>
 									</form>
 								</div>

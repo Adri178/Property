@@ -444,7 +444,7 @@ if(isset($_POST['add']))
 
 										
 											<input type="submit" value="Submit" class="btn btn-primary"name="add" style="margin-left:200px;">
-										
+											<input type="button" class="btn btn-secondary" value="Cancel" onclick="window.location.href='dashboard.php';">
 									</div>
 								</form>
 								

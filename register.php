@@ -1,49 +1,66 @@
 <?php 
+session_start();
 include("config.php");
 $error="";
 $msg="";
 if(isset($_REQUEST['reg']))
 {
-	$name=$_REQUEST['name'];
-	$email=$_REQUEST['email'];
-	$phone=$_REQUEST['phone'];
-	$pass=$_REQUEST['pass'];
-	$utype=$_REQUEST['utype'];
-	
-	$uimage=$_FILES['uimage']['name'];
-	$temp_name1 = $_FILES['uimage']['tmp_name'];
-	$pass= sha1($pass);
-	
-	$query = "SELECT * FROM user where uemail='$email'";
-	$res=mysqli_query($con, $query);
-	$num=mysqli_num_rows($res);
-	
-	if($num == 1)
-	{
-		$error = "<p class='alert alert-warning'>Email Id already Exist</p> ";
-	}
-	else
-	{
-		
-		if(!empty($name) && !empty($email) && !empty($phone) && !empty($pass) && !empty($uimage))
-		{
-			
-			$sql="INSERT INTO user (uname,uemail,uphone,upass,utype,uimage) VALUES ('$name','$email','$phone','$pass','$utype','$uimage')";
-			$result=mysqli_query($con, $sql);
-			move_uploaded_file($temp_name1,"admin/user/$uimage");
-			   if($result){
-				   $msg = "<p class='alert alert-success'>Register Successfully</p> ";
-			   }
-			   else{
-				   $error = "<p class='alert alert-warning'>Register Not Successfully</p> ";
-			   }
-		}else{
-			$error = "<p class='alert alert-warning'>Please Fill all the fields</p>";
-		}
-	}
-	
+    $_SESSION['name']=$_REQUEST['name'];
+    $_SESSION['email']=$_REQUEST['email'];
+    $_SESSION['phone']=$_REQUEST['phone'];
+    $_SESSION['pass']=$_REQUEST['pass'];
+    $_SESSION['utype']=$_REQUEST['utype'];
+    $_SESSION['uimage'] = $_FILES['uimage']['name'];
+    $_SESSION['temp_name1'] = $_FILES['uimage']['tmp_name'];
+    
+    $name=$_REQUEST['name'];
+    $email=$_REQUEST['email'];
+    $phone=$_REQUEST['phone'];
+    $pass=$_REQUEST['pass'];
+    $utype=$_REQUEST['utype'];
+    $uimage=$_FILES['uimage']['name'];
+    $temp_name1 = $_FILES['uimage']['tmp_name'];
+    move_uploaded_file($temp_name1,"admin/user/$uimage");
+    $pass= sha1($pass);
+    
+    
+    $query = "SELECT * FROM user where uemail='$email'";
+    $res=mysqli_query($con, $query);
+    $num=mysqli_num_rows($res);
+    
+    if($num == 1)
+    {
+        $error = "<p class='alert alert-warning'>Email Id already Exist</p> ";
+    }
+    else
+    {
+        
+        if(!empty($name) && !empty($email) && !empty($phone) && !empty($pass) && !empty($uimage) && $utype == 'user')
+        {
+            
+            $sql="INSERT INTO user (uname,uemail,uphone,upass,utype,uimage) VALUES ('$name','$email','$phone','$pass','$utype','admin/user/$uimage')";
+            $result=mysqli_query($con, $sql);
+               if($result){
+                   $msg = "<p class='alert alert-success'>Register Successfully Silahkan Login :)</p> ";
+                   echo "<script>alert('Register berhasil. Silahkan login :)'); window.location='login.php';</script>";
+               }
+               else{
+                   $error = "<p class='alert alert-warning'>Register Not Successfully</p> ";
+               }
+        }else{
+            $error = "<p class='alert alert-warning'>Please Fill all the fields</p>";
+        }
+    }
+    
+    // Tambahkan kode untuk menangani redirection jika opsi builder dipilih
+    if($_SESSION['utype'] == "builder") {
+        // Redirect ke langganan.php
+        header("Location: lang.php");
+        exit; // Pastikan untuk keluar setelah mengarahkan pengguna
+    }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <!-- FOR MORE PROJECTS visit: codeastro.com -->
